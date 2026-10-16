@@ -36,6 +36,7 @@ outputs:
       run:
         - python >=${{ python_min }}
         - raysect-stubs >=${{ raysect_version }},<${{ raysect_cap }}
+        - scipy-stubs
       run_constraints:
         - cherab >=${{ cherab_version }},<${{ cherab_cap }}
     tests:
