@@ -1,9 +1,9 @@
 schema_version: 1
 
 context:
-  stubs_version: 2
-  cherab_version: 1.5.0
-  cherab_cap: 1.6.0
+  stubs_version: 1
+  cherab_version: 1.6.0
+  cherab_cap: 1.7.0
   raysect_version: 0.9.1
   raysect_cap: 0.10.0
 
@@ -13,7 +13,7 @@ recipe:
 
 source:
   url: https://github.com/munechika-koyo/cherab-stubs/archive/v${{ cherab_version }}.${{ stubs_version }}.tar.gz
-  sha256: 2ae4a1a51b7ed8f7fe4d91cb0e2b467fa830a2dd7596ad23c1dabbaf2786a5bb
+  sha256: a61b8ae89fc07279987aca0a73347280a53514ab213793cbc9bcb5a3301fcf11
 
 build:
   number: 0
@@ -43,7 +43,7 @@ outputs:
           python_version:
             - ${{ python_min }}.*
             - "*"
-          pip_check: false
+          pip_check: true
 
   - package:
       name: cherab-typed
@@ -65,7 +65,7 @@ outputs:
           python_version:
             - ${{ python_min }}.*
             - "*"
-          pip_check: false
+          pip_check: true
       - files:
           source:
             - pyproject.toml
